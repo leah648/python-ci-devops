@@ -14,7 +14,7 @@ def test_json_response():
 def test_post_request():
     payload = {"key": "value"}
     response = requests.post("https://httpbin.org/post", json=payload, verify=False)
-    assert response.status_code == 201
+    assert response.status_code == 200
     data = response.json()
     assert data["json"] == payload
 
